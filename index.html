@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hochwertige & hausgemachte Seifen aus 100% natürlichen Zutaten – direkt aus der Schweiz.">
   <title>Natürliche Seifen – Hausgemacht in der Schweiz</title>
   <!-- Verknüpfung mit der CSS-Datei -->
   <link rel="stylesheet" href="styles.css">
@@ -11,7 +12,10 @@
   <!-- Header & Navigation -->
   <header>
     <nav>
-      <ul>
+      <div class="logo">
+        <a href="#home">Natürliche Seifen</a>
+      </div>
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#products">Produkte</a></li>
         <li><a href="#about">Über uns</a></li>
@@ -20,39 +24,83 @@
     </nav>
   </header>
 
-  <!-- Hero-Bereich -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Natürliche Seifen</h1>
-      <p>Hochwertige & hausgemachte Seifen aus der Schweiz – hergestellt mit 100% natürlichen Zutaten.</p>
-      <a href="#products" class="btn">Jetzt entdecken</a>
-    </div>
-  </section>
+  <!-- Hauptinhalt -->
+  <main>
+    <!-- Hero-Bereich -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Natürliche Seifen</h1>
+        <p>Hochwertige & hausgemachte Seifen aus 100% natürlichen Zutaten – direkt aus der Schweiz.</p>
+        <a href="#products" class="btn">Jetzt entdecken</a>
+      </div>
+    </section>
 
-  <!-- Produkte -->
-  <section id="products">
-    <h2>Unsere Produkte</h2>
-    <div class="product-grid">
-      <!-- Produkt 1 -->
-      <div class="product-card">
-        <img src="soap1.jpg" alt="Lavendel Seife">
-        <h3>Lavendel Seife</h3>
-        <p>Beruhigender Lavendelduft kombiniert mit pflegenden Inhaltsstoffen.</p>
-        <span class="price">CHF 12.00</span>
-        <button class="btn">In den Warenkorb</button>
+    <!-- Produkte -->
+    <section id="products">
+      <h2>Unsere Produkte</h2>
+      <div class="product-grid">
+        <!-- Produkt 1 -->
+        <article class="product-card">
+          <img src="soap1.jpg" alt="Lavendel Seife" loading="lazy">
+          <div class="product-info">
+            <h3>Lavendel Seife</h3>
+            <p>Beruhigender Lavendelduft kombiniert mit pflegenden Inhaltsstoffen.</p>
+            <span class="price">CHF 12.00</span>
+            <button class="btn">In den Warenkorb</button>
+          </div>
+        </article>
+        <!-- Produkt 2 -->
+        <article class="product-card">
+          <img src="soap2.jpg" alt="Rosmarin Seife" loading="lazy">
+          <div class="product-info">
+            <h3>Rosmarin Seife</h3>
+            <p>Belebend und reinigend – ideal für den täglichen Gebrauch.</p>
+            <span class="price">CHF 10.00</span>
+            <button class="btn">In den Warenkorb</button>
+          </div>
+        </article>
+        <!-- Produkt 3 -->
+        <article class="product-card">
+          <img src="soap3.jpg" alt="Zitrone Seife" loading="lazy">
+          <div class="product-info">
+            <h3>Zitrone Seife</h3>
+            <p>Erfrischende Zitronennoten für einen vitalisierenden Start in den Tag.</p>
+            <span class="price">CHF 11.50</span>
+            <button class="btn">In den Warenkorb</button>
+          </div>
+        </article>
       </div>
-      <!-- Produkt 2 -->
-      <div class="product-card">
-        <img src="soap2.jpg" alt="Rosmarin Seife">
-        <h3>Rosmarin Seife</h3>
-        <p>Belebend und reinigend – ideal für den täglichen Gebrauch.</p>
-        <span class="price">CHF 10.00</span>
-        <button class="btn">In den Warenkorb</button>
-      </div>
-      <!-- Produkt 3 -->
-      <div class="product-card">
-        <img src="soap3.jpg" alt="Zitrone Seife">
-        <h3>Zitrone Seife</h3>
-        <p>Erfrischende Zitronennoten für einen vitalisierenden Start in den Tag.</p>
-        <span class="price">CHF 11.50</span>
-        <button class="
+    </section>
+
+    <!-- Über uns -->
+    <section id="about">
+      <h2>Über uns</h2>
+      <p>
+        Wir sind ein kleines, engagiertes Team, das mit Leidenschaft und handwerklichem Können hochwertige, hausgemachte Seifen herstellt. Unsere Produkte basieren auf 100% natürlichen Zutaten, um Ihnen ein reines und nachhaltiges Pflegeerlebnis zu bieten.
+      </p>
+    </section>
+
+    <!-- Kontaktformular -->
+    <section id="contact">
+      <h2>Kontakt</h2>
+      <form action="/submit-form" method="POST" aria-label="Kontaktformular">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Nachricht:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Senden</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Natürliche Seifen. Alle Rechte vorbehalten. | Schweiz</p>
+  </footer>
+</body>
+</html>
